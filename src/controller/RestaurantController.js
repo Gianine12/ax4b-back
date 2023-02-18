@@ -229,9 +229,9 @@ module.exports = {
 
     const votacao = await Votacao.findAll({
       where: {
-        // hora_votacao: {
-        //   [sequelize.Op.between]: ['09:00','11:50']
-        // },
+        hora_votacao: {
+          [sequelize.Op.between]: ['09:00','11:50']
+        },
         data_votacao: {
           [sequelize.Op.eq]: novaData
         }
